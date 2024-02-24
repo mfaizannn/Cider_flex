@@ -1,13 +1,19 @@
-
-import logo from './logo.svg';
-import './App.css';
-import { Typography } from '@mui/material';
-
+import React from 'react';
+import Signup from './Signup'; // Assuming Signup.js is in the same directory
+import './App.css'; // Your global styles
 
 function App() {
   return (
     <div className="App">
-      <Typography variant="h1">Hello World</Typography>
+      <header className="App-header">
+        {/* You could place a global header here */}
+      </header>
+      <main>
+        <Signup />
+      </main>
+      <footer>
+        {/* And maybe a global footer here */}
+      </footer>
     </div>
   );
 }
