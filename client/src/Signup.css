@@ -1,0 +1,136 @@
+.signup-container {
+  display: flex;
+  min-height: 100vh;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.signup-logo-section {
+  flex: 1;
+  background-color: #161616;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Adjusted the font size and margin to ensure the logo fits well */
+.logo h1 {
+  font-size: 10rem; /* Adjusted font size */
+  margin-bottom: 0; /* Removed bottom margin */
+  align-items: center;
+}
+
+.logo .logo-x {
+  color: #e30000;
+}
+
+.logo p {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 1rem; /* Adjusted bottom margin */
+}
+
+.signup-form-section {
+  flex: 1;
+  background-color: #161616;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.signup-form-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.signup-form-section p {
+  margin-bottom: 1rem; /* Adjusted bottom margin */
+}
+
+.signup-form-section form {
+  width: 100%; /* Set to 100% to match the width of the inputs */
+  max-width: 500px; /* Max-width to control the form size on larger screens */
+  color: white;
+}
+
+.signup-form-section input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;  
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; /* Reduced margin-bottom */
+  width: 100%; /* Set to 100% to match the width of the inputs */
+  max-width: 500px; /* Max-width to control the size on larger screens */
+}
+
+.terms + p { /* This selector targets the paragraph immediately following .terms */
+  margin-top: 0; /* Remove top margin to bring it closer to the checkbox */
+  font-size: 0.9rem; /* Adjust the font size if necessary */
+  color: #aaa; /* Lighten the color if desired */
+  text-align: center; /* Ensure the text is centered */
+  width: 100%; /* Set to 100% to match the width of the inputs */
+  max-width: 500px; /* Max-width to control the size on larger screens */
+}
+
+/* Removed the fixed margin-right */
+.terms input[type="checkbox"] {
+  margin-left: -15rem;
+  margin-right: -14rem; /* Adjust for a small space between checkbox and label */
+  margin-top: 1rem;
+}
+
+.signup-button {
+  width: 106.5%; /* Set to 100% to match the width of the inputs */
+  padding: 1rem;
+  background-color: #e30000;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.signup-button:hover {
+  background-color: darkred;
+}
+
+.signin-redirect {
+  text-align: center;
+  margin-top: 1rem;
+  width: 100%; /* Set to 100% to match the width of the inputs */
+  max-width: 500px; /* Max-width to control the size on larger screens */
+}
+
+.signin-redirect a {
+  color: #e30000;
+  text-decoration: none;
+}
+
+
+/* Add responsive design */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+  }
+
+  .signup-logo-section,
+  .signup-form-section {
+    flex: none;
+    width: 100%;
+    align-items: center;
+  }
+
+  .signup-form-section h2,
+  .signup-form-section p {
+    text-align: center;
+  }
+}
