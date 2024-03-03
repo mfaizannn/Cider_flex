@@ -11,9 +11,6 @@ function App() {
       <main>
         <Signup />
       </main>
-      <footer>
-        {/* And maybe a global footer here */}
-      </footer>
     </div>
   );
 }

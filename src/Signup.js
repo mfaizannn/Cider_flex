@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './Signup.css'; // Make sure to create a corresponding CSS file
-
+import './Signup.css'; // Make sure the CSS file is in the same directory
+import logo from './flexlogo.png';
 const Signup = () => {
   const [user, setUser] = useState({
     fullName: '',
@@ -17,17 +17,18 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Implement your submit logic here, such as validation or POST request
+    // Here you can handle the form submission to your backend
     console.log(user);
   };
 
   return (
     <div className="signup-container">
-      <div className="logo">
-        <h1>flex<span className="logo-x">X</span></h1>
-        <p>Your personal gym assistant</p>
+      <div className="signup-logo-section">
+        <div className="logo">
+          <img src = {logo} alt="logo" />
+        </div>
       </div>
-      <div className="signup-form">
+      <div className="signup-form-section">
         <h2>Sign up</h2>
         <p>Join FlexFitness to get started</p>
         <form onSubmit={handleSubmit}>
@@ -40,11 +41,11 @@ const Signup = () => {
             <input type="checkbox" id="agree" />
             <label htmlFor="agree">By signing up, you agree to our Terms and Privacy Policy.</label>
           </div>
-          <button type="submit">Sign up</button>
-          <div className="login-link">
-            Already have an account? <a href="/login">Log in</a>
-          </div>
+          <button type="submit" className="signup-button">Sign up</button>
         </form>
+        <div className="signin-redirect">
+          Already have an account? <a href="/login">Log in</a>
+        </div>
       </div>
     </div>
   );
